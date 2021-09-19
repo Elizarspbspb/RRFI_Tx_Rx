@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[WLAN.dsp]
+SCC_Aux_Path = "\\Amber-server\VSS\"
+SCC_Project_Name = "$/WLAN", AKFAAAAA
+
+[WLAN.dsw]
+SCC_Aux_Path = "\\Amber-server\VSS\"
+SCC_Project_Name = "$/WLAN", AKFAAAAA
+
+[WLAN.vcproj]
+SCC_Aux_Path = "\\Amber-server\VSS\"
+SCC_Project_Name = "$/WLAN", AKFAAAAA

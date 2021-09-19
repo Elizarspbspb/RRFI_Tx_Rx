@@ -1,0 +1,12 @@
+Iteration=43
+ TransmittedBits=34400
+ ErrorBits=0
+TransmittedFrames=43
+ ErrorFrames=0
+ SNR=10.000000
+ BER=0.000000e+00
+ BERNoSyncError=0.000000e+00
+ FER=0.000000e+00
+ Throughput=6.00
+ DataThroughput=5.00
+ PacketDetectionErrors=0

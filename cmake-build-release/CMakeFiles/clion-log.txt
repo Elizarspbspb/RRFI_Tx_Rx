@@ -1,0 +1,24 @@
+/snap/clion/163/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -D "CMAKE_EXE_LINKER_FLAGS=-static-libgcc -static-libstdc++" -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/elizar/RRFI_Tx_Rx
+-- start WLAN...
+-- start running cmake...
+-- Boost_INCLUDE_DIRS: /usr/include
+-- Boost_LIBRARIES: Boost::system;Boost::filesystem;Boost::unit_test_framework
+-- Boost_VERSION: 1.71.0
+CMake Warning (dev) at /snap/clion/163/bin/cmake/linux/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (PkgConfig)
+  does not match the name of the calling package (UHD).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /snap/clion/163/bin/cmake/linux/share/cmake-3.20/Modules/FindPkgConfig.cmake:70 (find_package_handle_standard_args)
+  /usr/local/lib/cmake/uhd/UHDConfig.cmake:42 (include)
+  CMakeLists.txt:461 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- UHD_INCLUDE_DIRS: /usr/local/include
+-- UHD_LIBRARIES: /usr/local/lib/libuhd.so
+-- UHD_VERSION: 4.0.0.0-93-g3b9ced8f
+FINISH
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/elizar/RRFI_Tx_Rx/cmake-build-release

@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1605653964 source:/home/elizar/Code_Blocks/WLAN Transmitter/golay_lib/golay_wrap.cpp
+	"golay_wrap.h"
+	"Golay.h"
+
+1605653327 /home/elizar/Code_Blocks/WLAN Transmitter/golay_lib/golay_wrap.h
+
+1605653327 /home/elizar/Code_Blocks/WLAN Transmitter/golay_lib/Golay.h
+
+1605653730 source:/home/elizar/Code_Blocks/WLAN Transmitter/golay_lib/Golay.cpp
+	"Golay.h"
+	<math.h>
+	<stdio.h>
+
+1605652109 source:/home/elizar/Code_Blocks/WLAN Transmitter/golay_lib/Golay.c
+	"Golay.h"
+	<math.h>
+	<stdio.h>
+
+1605652862 source:/home/elizar/Code_Blocks/WLAN Transmitter/golay_lib/golay_wrap.c
+	"golay_wrap.h"
+	"Golay.h"
+
+1605653730 source:/home/elizar/Code_Blocks/WLAN_Transmitter/golay_lib/Golay.cpp
+	"Golay.h"
+	<math.h>
+	<stdio.h>
+
+1605653327 /home/elizar/Code_Blocks/WLAN_Transmitter/golay_lib/Golay.h
+
+1605653964 source:/home/elizar/Code_Blocks/WLAN_Transmitter/golay_lib/golay_wrap.cpp
+	"golay_wrap.h"
+	"Golay.h"
+
+1605653327 /home/elizar/Code_Blocks/WLAN_Transmitter/golay_lib/golay_wrap.h
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Detection" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Debug" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-W" />
+				</Compiler>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Release" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+			</Target>
+		</Build>
+		<Unit filename="CADC.cpp" />
+		<Unit filename="CADC.h" />
+		<Unit filename="CAGC.cpp" />
+		<Unit filename="CAGC.h" />
+		<Unit filename="CAGCHistory.h" />
+		<Unit filename="CAcquisitior.cpp" />
+		<Unit filename="CAcquisitior.h" />
+		<Unit filename="CBeginBlock.h" />
+		<Unit filename="CBlock.h" />
+		<Unit filename="CBus.cpp" />
+		<Unit filename="CBus.h" />
+		<Unit filename="CCorrelator.cpp" />
+		<Unit filename="CCorrelator.h" />
+		<Unit filename="CDecimator.cpp" />
+		<Unit filename="CDecimator.h" />
+		<Unit filename="CEndBlock.h" />
+		<Unit filename="CMail.cpp" />
+		<Unit filename="CMail.h" />
+		<Unit filename="CMailClient.h" />
+		<Unit filename="CMessage.cpp" />
+		<Unit filename="CMessage.h" />
+		<Unit filename="CMessageBus.cpp" />
+		<Unit filename="CMessageBus.h" />
+		<Unit filename="CModelParameters.h" />
+		<Unit filename="CReceiver.cpp" />
+		<Unit filename="CReceiver.h" />
+		<Unit filename="CSplitter.h" />
+		<Unit filename="CSynchronizer.cpp" />
+		<Unit filename="CSynchronizer.h" />
+		<Unit filename="CThroughVector.h" />
+		<Unit filename="CVGA.cpp" />
+		<Unit filename="CVGA.h" />
+		<Unit filename="DecimatorFilter.cpp" />
+		<Unit filename="DecimatorFilter.h" />
+		<Unit filename="FXPComplex/FXPComplex16.h" />
+		<Unit filename="FXPComplex/FXPComplex32.h" />
+		<Unit filename="FXPComplex/fxpcomplex16.cpp" />
+		<Unit filename="FXPComplex/fxpcomplex32.cpp" />
+		<Unit filename="GSLComplex/CGSLComplex.h" />
+		<Unit filename="Includes.h" />
+		<Unit filename="PacketDetectionLib.h" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

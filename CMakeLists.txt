@@ -1,0 +1,488 @@
+#cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.17)
+project(RRFI_Tx_Rx)
+
+message(STATUS "start WLAN...")
+#set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 14)
+
+#include_directories(/usr/include/mpi/)
+#set(CMAKE_CXX_COMPILER /usr/bin/mpic++)
+
+include_directories(.)
+include_directories(out/WLANT/Detection)
+include_directories(out/WLANT/Detection/FXPComplex)
+include_directories(out/WLANT/Detection/GSLComplex)
+include_directories(out/WLANT/DopplerChannel)
+include_directories(out/WLANT/golay_lib)
+include_directories(out/WLANT/LIBS)
+include_directories(out/WLANT/LIBS/GSL)
+include_directories(out/WLANT/LIBS/GSL/include)
+include_directories(out/WLANT/LIBS/GSL/include/gsl)
+include_directories(out/WLANT/packages)
+include_directories(out/WLANT/packages/Microsoft.Gsl.0.1.2.1)
+include_directories(out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build)
+include_directories(out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build/native)
+include_directories(out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build/native/include)
+include_directories(out/WLANT/RS_Decoder_Lib)
+
+add_executable(RRFI_Tx_Rx
+        out/WLANT/Detection/FXPComplex/fxpcomplex16.cpp
+        out/WLANT/Detection/FXPComplex/FXPComplex16.h
+        out/WLANT/Detection/FXPComplex/fxpcomplex32.cpp
+        out/WLANT/Detection/FXPComplex/FXPComplex32.h
+        out/WLANT/Detection/GSLComplex/CGSLComplex.h
+        out/WLANT/Detection/CAcquisitior.cpp
+        out/WLANT/Detection/CAcquisitior.h
+        out/WLANT/Detection/CADC.cpp
+        out/WLANT/Detection/CADC.h
+        out/WLANT/Detection/CAGC.cpp
+        out/WLANT/Detection/CAGC.h
+        out/WLANT/Detection/CAGCHistory.h
+        out/WLANT/Detection/CBeginBlock.h
+        out/WLANT/Detection/CBlock.h
+        out/WLANT/Detection/CBus.cpp
+        out/WLANT/Detection/CBus.h
+        out/WLANT/Detection/CCorrelator.cpp
+        out/WLANT/Detection/CCorrelator.h
+        out/WLANT/Detection/CDecimator.cpp
+        out/WLANT/Detection/CDecimator.h
+        out/WLANT/Detection/CEndBlock.h
+        out/WLANT/Detection/CFinallyBlock.h
+        out/WLANT/Detection/CMail.cpp
+        out/WLANT/Detection/CMail.h
+        out/WLANT/Detection/CMailClient.h
+        out/WLANT/Detection/CMessage.cpp
+        out/WLANT/Detection/CMessage.h
+        out/WLANT/Detection/CMessageBus.cpp
+        out/WLANT/Detection/CMessageBus.h
+        out/WLANT/Detection/CModelParameters.h
+        out/WLANT/Detection/CPrimaryBlock.h
+        out/WLANT/Detection/CReceiver.cpp
+        out/WLANT/Detection/CReceiver.h
+        out/WLANT/Detection/CSplitter.h
+        out/WLANT/Detection/CSynchronizer.cpp
+        out/WLANT/Detection/CSynchronizer.h
+        out/WLANT/Detection/CThroughVector.h
+        out/WLANT/Detection/CVGA.cpp
+        out/WLANT/Detection/CVGA.h
+        out/WLANT/Detection/DecimatorFilter.cpp
+        out/WLANT/Detection/DecimatorFilter.h
+        out/WLANT/Detection/Includes.h
+        out/WLANT/Detection/lib.a
+        out/WLANT/Detection/main.cpp
+        out/WLANT/Detection/PacketDetectionLib.h
+
+        out/WLANT/DopplerChannel/DopplerChannel.cpp
+        out/WLANT/DopplerChannel/DopplerChannel.h
+        out/WLANT/DopplerChannel/FileUtils.cpp
+        out/WLANT/DopplerChannel/FileUtils.h
+        out/WLANT/DopplerChannel/GeneralUtils.h
+        out/WLANT/DopplerChannel/RNG.cpp
+        out/WLANT/DopplerChannel/RNG.h
+
+        out/WLANT/golay_lib/Golay.cpp
+        out/WLANT/golay_lib/Golay.h
+        out/WLANT/golay_lib/golay_wrap.cpp
+        out/WLANT/golay_lib/golay_wrap.h
+        out/WLANT/golay_lib/libgolay_lib.a
+
+        out/WLANT/LIBS/GSL/include/gsl/gsl_blas.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_blas_types.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_complex.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_complex_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_complex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_complex_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_block_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_cblas.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_chebyshev.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_combination.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_complex.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_complex_math.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_const.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_const_cgs.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_const_mks.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_const_num.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_dft_complex.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_dft_complex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_dht.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_diff.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_eigen.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_errno.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fft.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fft_complex.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fft_complex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fft_halfcomplex.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fft_halfcomplex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fft_real.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fft_real_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_fit.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_heapsort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_histogram.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_histogram2d.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_ieee_utils.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_integration.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_interp.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_linalg.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_machine.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_math.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_complex_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_complex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_complex_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_matrix_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_message.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_min.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_mode.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_monte.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_monte_miser.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_monte_plain.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_monte_vegas.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_multifit.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_multifit_nlin.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_multimin.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_multiroots.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_nan.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_ntuple.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_odeiv.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permutation.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_complex_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_complex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_complex_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_complex_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_complex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_complex_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_permute_vector_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_poly.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_pow_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_precision.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_qrng.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_randist.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_rng.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_roots.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_airy.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_bessel.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_clausen.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_coulomb.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_coupling.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_dawson.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_debye.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_dilog.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_elementary.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_ellint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_elljac.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_erf.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_exp.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_expint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_fermi_dirac.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_gamma.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_gegenbauer.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_hyperg.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_laguerre.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_lambert.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_legendre.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_log.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_pow_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_psi.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_result.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_synchrotron.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_transport.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_trig.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sf_zeta.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_siman.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sort_vector_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_specfunc.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_spline.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_statistics_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sum.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_sys.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_test.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_types.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_char.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_complex.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_complex_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_complex_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_complex_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_float.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_int.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_long.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_long_double.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_short.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_uchar.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_uint.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_ulong.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_vector_ushort.h
+        out/WLANT/LIBS/GSL/include/gsl/gsl_version.h
+
+        out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build/native/include/gsl.h
+        out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build/native/include/gsl_assert.h
+        out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build/native/include/gsl_util.h
+        out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build/native/include/span.h
+        out/WLANT/packages/Microsoft.Gsl.0.1.2.1/build/native/include/string_span.h
+
+        out/WLANT/RS_Decoder_Lib/CyclicCode.cpp
+        out/WLANT/RS_Decoder_Lib/CyclicCode.h
+        out/WLANT/RS_Decoder_Lib/CyclicCodeException.cpp
+        out/WLANT/RS_Decoder_Lib/CyclicCodeException.h
+        out/WLANT/RS_Decoder_Lib/GaloisException.cpp
+        out/WLANT/RS_Decoder_Lib/GaloisException.h
+        out/WLANT/RS_Decoder_Lib/GaloisExtendedField.cpp
+        out/WLANT/RS_Decoder_Lib/GaloisExtendedField.h
+        out/WLANT/RS_Decoder_Lib/GaloisExtendedField2mFast.cpp
+        out/WLANT/RS_Decoder_Lib/GaloisExtendedField2mFast.h
+        out/WLANT/RS_Decoder_Lib/GaloisField.cpp
+        out/WLANT/RS_Decoder_Lib/GaloisField.h
+        out/WLANT/RS_Decoder_Lib/GaloisFieldInterface.cpp
+        out/WLANT/RS_Decoder_Lib/GaloisFieldInterface.h
+        out/WLANT/RS_Decoder_Lib/GaloisPolynomial.cpp
+        out/WLANT/RS_Decoder_Lib/GaloisPolynomial.h
+        out/WLANT/RS_Decoder_Lib/RS_wrapper.cpp
+        out/WLANT/RS_Decoder_Lib/RS_wrapper.h
+
+        out/WLANT/ADC.cpp
+        out/WLANT/ADC.h
+        out/WLANT/add_cyclic_prefix.cpp
+        out/WLANT/add_cyclic_prefix.h
+        out/WLANT/add_preamble.cpp
+        out/WLANT/add_preamble.h
+        out/WLANT/agc.cpp
+        out/WLANT/agc.h
+        out/WLANT/bitloading.cpp
+        out/WLANT/bitloading.h
+        out/WLANT/channel.cpp
+        out/WLANT/channel.hpp
+        out/WLANT/channel_estimation.cpp
+        out/WLANT/channel_estimation.h
+        out/WLANT/commonfunc.cpp
+        out/WLANT/commonfunc.h
+        out/WLANT/Configuration.cfg
+        out/WLANT/conv_code.cpp
+        out/WLANT/conv_code.h
+        out/WLANT/conv_decoder.cpp
+        out/WLANT/conv_decoder.h
+        out/WLANT/conv_encoder.cpp
+        out/WLANT/conv_encoder.h
+        out/WLANT/DAC.cpp
+        out/WLANT/DAC.h
+        out/WLANT/data.txt
+        out/WLANT/datascreen.jpg
+        out/WLANT/Decimator.cpp
+        out/WLANT/Decimator.h
+        out/WLANT/deinterleaver.cpp
+        out/WLANT/deinterleaver.h
+        out/WLANT/demodulator.cpp
+        out/WLANT/demodulator.h
+        out/WLANT/demodulatorABL.cpp
+        out/WLANT/demodulatorABL.h
+        out/WLANT/depuncturer.cpp
+        out/WLANT/depuncturer.h
+        out/WLANT/DopplerChannel.cfg
+        out/WLANT/equalizer.cpp
+        out/WLANT/equalizer.h
+        out/WLANT/extract_LTS.cpp
+        out/WLANT/extract_LTS.h
+        out/WLANT/fft.cpp
+        out/WLANT/fft.h
+        out/WLANT/find_packet_edge.cpp
+        out/WLANT/find_packet_edge.h
+        out/WLANT/fine_freq_sync.cpp
+        out/WLANT/fine_freq_sync.h
+        out/WLANT/frequency_sync.cpp
+        out/WLANT/frequency_sync.h
+        out/WLANT/golay_wrap.h
+        out/WLANT/hufc.cpp
+        out/WLANT/hufc.h
+        out/WLANT/interleaver.cpp
+        out/WLANT/interleaver.h
+        out/WLANT/interleaver_patt.cpp
+        out/WLANT/interleaver_patt.h
+        out/WLANT/Interpolation.cpp
+        out/WLANT/Interpolation.h
+        out/WLANT/ldpc_code.cpp
+        out/WLANT/ldpc_code.h
+        out/WLANT/ldpc_decode_fxp.cpp
+        out/WLANT/ldpc_decode_fxp.h
+        out/WLANT/ldpc_encode.cpp
+        out/WLANT/ldpc_encode.h
+        out/WLANT/model.cpp
+        out/WLANT/model.h
+        out/WLANT/modulator.cpp
+        out/WLANT/modulator.h
+        out/WLANT/modulatorABL.cpp
+        out/WLANT/modulatorABL.h
+        out/WLANT/PacketDetectionLib.h
+        out/WLANT/phase_tracker.cpp
+        out/WLANT/phase_tracker.h
+        out/WLANT/pilots_insertion.cpp
+        out/WLANT/pilots_insertion.h
+        out/WLANT/puncturer.cpp
+        out/WLANT/puncturer.h
+        out/WLANT/receiver.cpp
+        out/WLANT/receiver.h
+        out/WLANT/remove_cyclic_prefix.cpp
+        out/WLANT/remove_cyclic_prefix.h
+        out/WLANT/rotor.cpp
+        out/WLANT/rotor.h
+        out/WLANT/RS_wrapper.cpp
+        out/WLANT/scrambler.cpp
+        out/WLANT/scrambler.h
+        out/WLANT/sim_consts.cpp
+        out/WLANT/sim_consts.h
+        out/WLANT/sim_params.cpp
+        out/WLANT/sim_params.h
+        out/WLANT/time_sync.cpp
+        out/WLANT/time_sync.h
+        out/WLANT/timesignal.cfg
+        out/WLANT/timesignal1.cfg
+        out/WLANT/transmitter.cpp
+        out/WLANT/transmitter.h
+        out/WLANT/VGA.cpp
+        out/WLANT/VGA.h
+        out/WLANT/times.cpp
+        out/WLANT/times.h
+
+        ETSI_RRS_SpectrumControlServices.cpp
+        ETSI_RRS_SpectrumControlServices.h
+        ETSI_RRS_PowerControlServices.cpp
+        ETSI_RRS_PowerControlServices.h
+        ETSI_RRS_AntennaManagementServices.cpp
+        ETSI_RRS_AntennaManagementServices.h
+        ETSI_RRS_RRFI.cpp
+        ETSI_RRS_RRFI.h
+        ETSI_RRS_TxRxChainControlServices.cpp
+        ETSI_RRS_TxRxChainControlServices.h
+        ETSI_RRS_USRP_Device.cpp
+        ETSI_RRS_USRP_Device.h
+        ETSI_RRS_RRFITests.cpp
+        ascii_art_dft.h)
+
+target_link_libraries(RRFI_Tx_Rx
+        /home/elizar/WLAN/Detection/lib.a
+        /home/elizar/gsl/lib/libgsl.a
+        /home/elizar/gsl/lib/libgslcblas.a
+        /home/elizar/WLAN/RS_Decoder_Lib/RS_Decoder_Lib.lib
+        -lm
+        -cpp
+        )
+
+message(STATUS "start running cmake...")
+
+#Boost libraries finding
+find_package(Boost 1.58.0 COMPONENTS system filesystem unit_test_framework REQUIRED)
+if(Boost_FOUND)
+    message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+    message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
+    message(STATUS "Boost_VERSION: ${Boost_VERSION}")
+    include_directories(${Boost_INCLUDE_DIRS})
+endif()
+
+#UHD libraries finding
+find_package(UHD)
+if(UHD_FOUND)
+    message(STATUS "UHD_INCLUDE_DIRS: ${UHD_INCLUDE_DIRS}")
+    message(STATUS "UHD_LIBRARIES: ${UHD_LIBRARIES}")
+    message(STATUS "UHD_VERSION: ${UHD_VERSION}")
+    include_directories(${UHD_INCLUDE_DIRS})
+endif()
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
+enable_testing()
+
+if(UHD_FOUND)
+    target_link_libraries(RRFI_Tx_Rx ${UHD_LIBRARIES})
+endif()
+if(Boost_FOUND)
+    target_link_libraries(RRFI_Tx_Rx ${Boost_LIBRARIES})
+endif()
+
+target_link_libraries(RRFI_Tx_Rx ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
+
+add_test(NAME Test COMMAND RRFI_Tx_Rx)
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+SET(CMAKE_CXX_FLAGS -pthread)
+find_package(Threads REQUIRED)
+target_link_libraries(${RRFI_Tx_Rx} Threads::Threads)
+
+message(FINISH)

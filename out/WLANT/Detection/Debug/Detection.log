@@ -1,0 +1,36 @@
+﻿  CAcquisitior.cpp
+d:\wlan\detection\cacquisitior.cpp(101): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+d:\wlan\detection\cacquisitior.cpp(102): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+d:\wlan\detection\cacquisitior.cpp(103): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  CADC.cpp
+  CAGC.cpp
+d:\wlan\detection\cagc.cpp(370): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+d:\wlan\detection\cagc.cpp(385): warning C4554: "<<": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+  CBus.cpp
+  CCorrelator.cpp
+  CDecimator.cpp
+  CMail.cpp
+  CMessage.cpp
+  CMessageBus.cpp
+  CReceiver.cpp
+  CSynchronizer.cpp
+  CVGA.cpp
+  DecimatorFilter.cpp
+d:\wlan\detection\decimatorfilter.cpp(14): warning C4305: =: усечение из "double" в "float"
+d:\wlan\detection\decimatorfilter.cpp(70): warning C4244: аргумент: преобразование "double" в "short", возможна потеря данных
+d:\wlan\detection\decimatorfilter.cpp(74): warning C4018: >=: несоответствие типов со знаком и без знака
+d:\wlan\detection\decimatorfilter.cpp(75): warning C4244: +=: преобразование "float" в "short", возможна потеря данных
+d:\wlan\detection\decimatorfilter.cpp(76): warning C4244: +=: преобразование "float" в "short", возможна потеря данных
+d:\wlan\detection\decimatorfilter.cpp(93): warning C4018: >: несоответствие типов со знаком и без знака
+d:\wlan\detection\decimatorfilter.cpp(107): warning C4018: >=: несоответствие типов со знаком и без знака
+d:\wlan\detection\decimatorfilter.cpp(108): warning C4244: аргумент: преобразование "double" в "short", возможна потеря данных
+d:\wlan\detection\decimatorfilter.cpp(115): warning C4018: >=: несоответствие типов со знаком и без знака
+d:\wlan\detection\decimatorfilter.cpp(117): warning C4244: +=: преобразование "float" в "short", возможна потеря данных
+d:\wlan\detection\decimatorfilter.cpp(118): warning C4244: +=: преобразование "float" в "short", возможна потеря данных
+  fxpcomplex16.cpp
+  fxpcomplex32.cpp
+d:\wlan\detection\fxpcomplex\fxpcomplex32.cpp(136): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note:  см. объявление "fopen"
+  main.cpp
+  Создание кода...
+  Detection.vcxproj -> D:\WLAN\Detection\Debug\Detection.lib

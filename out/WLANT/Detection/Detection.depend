@@ -1,0 +1,194 @@
+# depslib dependency file v1.0
+1125612616 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CDecimator.cpp
+
+1122665338 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CBus.cpp
+	"CBus.h"
+
+1605204476 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CBus.h
+	"Includes.h"
+
+1605202961 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/Includes.h
+	<ncurses.h>
+	<vector>
+	<deque>
+	<iostream>
+	<string>
+	<math.h>
+	<map>
+	<complex>
+	<fstream>
+	<inttypes.h>
+
+1125635506 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CMail.cpp
+	"CMail.h"
+
+1125635506 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CMail.h
+	"Includes.h"
+	"CBlock.h"
+	"GSLComplex/CGSLComplex.h"
+	"FXPComplex/FXPComplex16.h"
+
+1125606840 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CBlock.h
+	"CBus.h"
+	"CBeginBlock.h"
+	"CEndBlock.h"
+
+1125896054 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CBeginBlock.h
+	"CBus.h"
+
+1126069790 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CEndBlock.h
+	"CBus.h"
+
+1605202292 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/GSLComplex/CGSLComplex.h
+	"/home/elizar/Code_Blocks/WLAN Transmitter/Detection/Includes.h"
+
+1125974794 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/FXPComplex/FXPComplex16.h
+	"../Includes.h"
+	"FXPComplex32.h"
+
+1125527430 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/FXPComplex/FXPComplex32.h
+	"../Includes.h"
+	"FXPComplex16.h"
+
+1605203455 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CMessage.cpp
+	"CMessage.h"
+
+1122775024 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CMessage.h
+	"Includes.h"
+
+1126660950 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CADC.cpp
+	"CADC.h"
+
+1126068234 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CADC.h
+	"Includes.h"
+	"CBlock.h"
+	"FXPComplex/FXPComplex16.h"
+	"GSLComplex/CGSLComplex.h"
+	"CMailClient.h"
+	"CMail.h"
+
+1125982792 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CMailClient.h
+	"CMail.h"
+	"Includes.h"
+
+1122775156 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CMessageBus.cpp
+	"CMessageBus.h"
+
+1122687268 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CMessageBus.h
+	"Includes.h"
+	"CBus.h"
+	"CMessage.h"
+
+1127278230 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CAcquisitior.cpp
+	"CAcquisitior.h"
+
+1127006260 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CAcquisitior.h
+	"Includes.h"
+	"CBlock.h"
+	"FXPComplex/FXPComplex16.h"
+	"CThroughVector.h"
+	"CAGC.h"
+	"CCorrelator.h"
+	"CMailClient.h"
+	"CMail.h"
+
+1605203619 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CThroughVector.h
+	"Includes.h"
+
+1126843014 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CAGC.h
+	"Includes.h"
+	"CBlock.h"
+	"FXPComplex/FXPComplex16.h"
+	"FXPComplex/FXPComplex32.h"
+	"CVGA.h"
+	"CAcquisitior.h"
+	"CAGCHistory.h"
+	"CMailClient.h"
+	"CMail.h"
+
+1127111816 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CVGA.h
+	"Includes.h"
+	"CBlock.h"
+	"FXPComplex/FXPComplex16.h"
+	"GSLComplex/CGSLComplex.h"
+	"CMailClient.h"
+	"CMail.h"
+	"CADC.h"
+
+1126210040 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CAGCHistory.h
+	"Includes.h"
+
+1126839768 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CCorrelator.h
+	"Includes.h"
+	"FXPComplex/FXPComplex16.h"
+	"FXPComplex/FXPComplex32.h"
+	"CThroughVector.h"
+
+1127016592 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CCorrelator.cpp
+	"CCorrelator.h"
+
+1126651416 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CReceiver.cpp
+	"CReceiver.h"
+
+1126651262 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CReceiver.h
+	"Includes.h"
+	"CBeginBlock.h"
+	"FXPComplex/FXPComplex16.h"
+	"GSLComplex/CGSLComplex.h"
+
+1126491452 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CVGA.cpp
+	"CVGA.h"
+
+1127114608 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/DecimatorFilter.cpp
+	"DecimatorFilter.h"
+
+1127109928 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/DecimatorFilter.h
+	"Includes.h"
+	"CBlock.h"
+	"CThroughVector.h"
+	"FXPComplex/FXPComplex16.h"
+
+1125526528 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/FXPComplex/fxpcomplex16.cpp
+	"FXPComplex16.h"
+	"FXPComplex32.h"
+
+1125526122 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/FXPComplex/fxpcomplex32.cpp
+	"FXPComplex32.h"
+
+1605204193 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CAGC.cpp
+	"CAGC.h"
+
+1605204718 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/main.cpp
+	"Includes.h"
+	"CSynchronizer.h"
+	"FXPComplex/FXPComplex16.h"
+
+1127276194 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CSynchronizer.h
+	"Includes.h"
+	"CAcquisitior.h"
+	"CADC.h"
+	"CAGC.h"
+	"CVGA.h"
+	"CReceiver.h"
+	"CMail.h"
+	"CBus.h"
+	"CSplitter.h"
+	"CDecimator.h"
+	"DecimatorFilter.h"
+	"CModelParameters.h"
+	"GSLComplex/CGSLComplex.h"
+	"FXPComplex/FXPComplex16.h"
+
+1605205163 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CSplitter.h
+	"Includes.h"
+	"CEndBlock.h"
+
+1605204608 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CDecimator.h
+	"Includes.h"
+	"CBlock.h"
+
+1127277368 /home/elizar/Code_Blocks/WLAN Transmitter/Detection/CModelParameters.h
+
+1127276194 source:/home/elizar/Code_Blocks/WLAN Transmitter/Detection/CSynchronizer.cpp
+	"CSynchronizer.h"
+

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Detection", "Detection.vcproj", "{B6AA4B2D-23E7-4213-BB2E-20CC02709BAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B6AA4B2D-23E7-4213-BB2E-20CC02709BAA}.Debug.ActiveCfg = Debug|Win32
+		{B6AA4B2D-23E7-4213-BB2E-20CC02709BAA}.Debug.Build.0 = Debug|Win32
+		{B6AA4B2D-23E7-4213-BB2E-20CC02709BAA}.Release.ActiveCfg = Release|Win32
+		{B6AA4B2D-23E7-4213-BB2E-20CC02709BAA}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

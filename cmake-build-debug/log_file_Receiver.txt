@@ -1,0 +1,14 @@
+ Start RRFI_Tx_Rx                                                                         | 2021-08-31 22:14:42:181775
+Board IN_ACTIVATE
+ Start time of waiting for receiving data from URA                                        | 2021-08-31 22:14:42:182794
+---------------------------------------------------------------------------------------------------------------
+ Start reading the configuration file                                                     | 2021-08-31 22:14:44:534951
+ Start convolutional encoder                                                              | 2021-08-31 22:14:44:552189
+ Start interleaver                                                                        | 2021-08-31 22:14:44:552221
+ Start modulation                                                                         | 2021-08-31 22:14:44:552227
+ Start scrambler                                                                          | 2021-08-31 22:14:44:552384
+---------------------------------------------------------------------------------------------------------------
+ Start send data to URA                                                                   | 2021-08-31 22:14:45:792256
+ Finish send data to URA                                                                  | 2021-08-31 22:14:45:792294
+ End Receiver                                                                             | 2021-08-31 22:14:45:792305
+ Start time of waiting for receiving data from URA                                        | 2021-08-31 22:14:45:792311

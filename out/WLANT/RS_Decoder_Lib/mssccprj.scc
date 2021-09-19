@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[RS_Decoder_Lib.dsp]
+SCC_Aux_Path = "\\Amber-server\VSS\"
+SCC_Project_Name = "$/WLAN/RS_Decoder_Lib", ZGGAAAAA
+
+[RS_Decoder_Lib.dsw]
+SCC_Aux_Path = "\\Amber-server\VSS\"
+SCC_Project_Name = "$/WLAN/RS_Decoder_Lib", ZGGAAAAA

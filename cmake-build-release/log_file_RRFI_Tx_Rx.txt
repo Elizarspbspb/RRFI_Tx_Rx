@@ -1,0 +1,19 @@
+ Start RRFI_Tx_Rx                                                                         | 2021-09-11 19:56:32:197357
+Board IN_ACTIVATE
+ Start time of waiting for receiving data from URA                                        | 2021-09-11 19:56:32:197541
+ End time of waiting for receiving data from URA                                          | 2021-09-11 19:56:32:433703
+Receiving . . .                                                                           | 2021-09-11 19:56:32:433776
+Transmitting . . .                                                                        | 2021-09-11 19:56:33:433867
+---------------------------------------------------------------------------------------------------------------
+ Start reading the configuration file                                                     | 2021-09-11 19:56:33:460176
+ Start convolutional encoder                                                              | 2021-09-11 19:56:33:468449
+ Start interleaver                                                                        | 2021-09-11 19:56:33:468476
+ Start modulation                                                                         | 2021-09-11 19:56:33:468480
+ Start scrambler                                                                          | 2021-09-11 19:56:33:468646
+---------------------------------------------------------------------------------------------------------------
+End Transmitting                                                                          | 2021-09-11 19:56:58:193851
+End Receiving                                                                             | 2021-09-11 19:57:16:085234
+ Start send data to URA                                                                   | 2021-09-11 19:57:16:583380
+ Finish send data to URA                                                                  | 2021-09-11 19:57:16:583427
+ End RRFI_Tx_Rx                                                                           | 2021-09-11 19:57:16:583437
+ Start time of waiting for receiving data from URA                                        | 2021-09-11 19:57:16:583446
